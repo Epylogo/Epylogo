@@ -9,9 +9,3 @@
 <br>
 
 <div align="center">
-
-### PROGRAMMER ANALYST · INFORMATICS ENGINEER
-
-React · TypeScript · UI/UX
-
-</div>
