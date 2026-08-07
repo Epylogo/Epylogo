@@ -1,9 +1,3 @@
-# EPYLOGO
-
-> Profile under construction.
-
-Frontend Developer · Informatics Engineer
-
 <p align="center">
   <img
     src="./assets/hero/hero.svg"
@@ -11,3 +5,13 @@ Frontend Developer · Informatics Engineer
     alt="Matías Pizarro Acevedo — Programmer Analyst and Informatics Engineer"
   />
 </p>
+
+<br>
+
+<div align="center">
+
+### PROGRAMMER ANALYST · INFORMATICS ENGINEER
+
+React · TypeScript · UI/UX
+
+</div>
