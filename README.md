@@ -8,36 +8,28 @@
 
 <br>
 
-<img
-  src="./assets/activity/activity.svg"
-  width="100%"
-  alt="Matías Pizarro Acevedo — GitHub Activity"
-/>
+<table>
+<tr>
 
-<br>
-
-<a href="TU_PORTFOLIO">
+<td width="50%" valign="top">
   <img
-    src="./assets/contact/contact.svg"
+    src="./assets/activity/activity.svg"
     width="100%"
-    alt="Visit Matías Pizarro Acevedo Portfolio"
+    alt="Matías Pizarro Acevedo — Development Activity"
   />
-</a>
+</td>
 
-<br>
+<td width="50%" valign="top">
+  <a href="https://TU-PORTAFOLIO-AQUI.com">
+    <img
+      src="./assets/briefcase/briefcase.svg"
+      width="100%"
+      alt="Visit Matías Pizarro Acevedo Portfolio"
+    />
+  </a>
+</td>
 
-<img
-  src="./assets/projects/selected-work.svg"
-  width="100%"
-  alt="Matías Pizarro Acevedo — Selected Work"
-/>
-
-<br>
-
-<img
-  src="./assets/certificates/certifications.svg"
-  width="100%"
-  alt="Matías Pizarro Acevedo — Certifications"
-/>
+</tr>
+</table>
 
 </div>
