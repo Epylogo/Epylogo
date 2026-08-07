@@ -9,3 +9,12 @@
 <br>
 
 <div align="center">
+<br>
+
+<p align="center">
+  <img
+    src="./assets/scan/scan.svg"
+    width="100%"
+    alt="Identity Scan — Matías Pizarro Acevedo"
+  />
+</p>
