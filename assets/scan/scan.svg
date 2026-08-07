@@ -1,0 +1,195 @@
+<svg width="1000" height="520" viewBox="0 0 1000 520"
+     xmlns="http://www.w3.org/2000/svg">
+
+  <defs>
+    <!-- Background scan lines -->
+    <pattern id="scanLines" width="6" height="6" patternUnits="userSpaceOnUse">
+      <rect width="6" height="6" fill="transparent"/>
+      <rect y="0" width="6" height="1" fill="#8E8E8E" opacity="0.08"/>
+      <rect y="3" width="6" height="1" fill="#8E8E8E" opacity="0.05"/>
+    </pattern>
+
+    <!-- Subtle glow -->
+    <filter id="softGlow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="1.6" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1000" height="520" fill="#050505"/>
+
+  <!-- Left accent strip -->
+  <rect x="0" y="0" width="14" height="520" fill="#FEFF01"/>
+
+  <!-- Top bar -->
+  <rect x="0" y="0" width="1000" height="76" fill="#0D0D0D"/>
+
+  <!-- Header left -->
+  <text
+    x="46"
+    y="42"
+    font-family="Arial Black, Arial, Helvetica, sans-serif"
+    font-size="18"
+    font-weight="900"
+    letter-spacing="1.4"
+    fill="#F2F2F2">
+    IDENTITY://SCAN
+  </text>
+
+  <text
+    x="46"
+    y="61"
+    font-family="Arial, Helvetica, sans-serif"
+    font-size="11"
+    font-weight="700"
+    letter-spacing="1.1"
+    fill="#A9A9A9">
+    VISUAL PROFILE / SYSTEM OVERVIEW
+  </text>
+
+  <!-- Header right -->
+  <text
+    x="950"
+    y="42"
+    text-anchor="end"
+    font-family="Arial Black, Arial, Helvetica, sans-serif"
+    font-size="14"
+    font-weight="900"
+    letter-spacing="1.5"
+    fill="#FEFF01">
+    STATUS / ONLINE
+  </text>
+
+  <text
+    x="950"
+    y="61"
+    text-anchor="end"
+    font-family="Arial, Helvetica, sans-serif"
+    font-size="11"
+    font-weight="700"
+    letter-spacing="1"
+    fill="#B8B8B8">
+    PROFILE READY
+  </text>
+
+  <!-- Main left scan area -->
+  <rect x="52" y="110" width="360" height="356" rx="10" fill="#0B0B0B" stroke="#2B2B2B" stroke-width="1.5"/>
+  <rect x="68" y="126" width="328" height="324" rx="8" fill="#111111" stroke="#4A4A4A" stroke-width="1.3"/>
+
+  <!-- Scan line texture -->
+  <rect x="68" y="126" width="328" height="324" rx="8" fill="url(#scanLines)"/>
+
+  <!-- Corner markers -->
+  <rect x="68" y="126" width="26" height="3" fill="#FEFF01"/>
+  <rect x="68" y="126" width="3" height="26" fill="#FEFF01"/>
+
+  <rect x="370" y="126" width="26" height="3" fill="#FEFF01"/>
+  <rect x="393" y="126" width="3" height="26" fill="#FEFF01"/>
+
+  <rect x="68" y="447" width="26" height="3" fill="#FEFF01"/>
+  <rect x="68" y="424" width="3" height="26" fill="#FEFF01"/>
+
+  <rect x="370" y="447" width="26" height="3" fill="#FEFF01"/>
+  <rect x="393" y="424" width="3" height="26" fill="#FEFF01"/>
+
+  <!-- Minimal silhouette -->
+  <ellipse cx="232" cy="218" rx="58" ry="70" fill="#171717" stroke="#7E7E7E" stroke-width="1.4"/>
+  <rect x="176" y="286" width="112" height="104" rx="18" fill="#171717" stroke="#7E7E7E" stroke-width="1.4"/>
+
+  <!-- Horizontal scan beam -->
+  <rect x="92" y="248" width="280" height="2.6" fill="#D9D9D9" opacity="0.95" filter="url(#softGlow)"/>
+
+  <!-- Left labels -->
+  <text
+    x="232"
+    y="414"
+    text-anchor="middle"
+    font-family="Arial Black, Arial, Helvetica, sans-serif"
+    font-size="18"
+    font-weight="900"
+    letter-spacing="1"
+    fill="#F2F2F2">
+    SCAN PORTRAIT
+  </text>
+
+  <text
+    x="232"
+    y="433"
+    text-anchor="middle"
+    font-family="Arial, Helvetica, sans-serif"
+    font-size="10.5"
+    font-weight="700"
+    letter-spacing="1"
+    fill="#A3A3A3">
+    PLACEHOLDER / CAN BE REPLACED LATER
+  </text>
+
+  <!-- Right data card -->
+  <rect x="454" y="110" width="492" height="356" rx="10" fill="#0B0B0B" stroke="#2B2B2B" stroke-width="1.5"/>
+
+  <!-- Right title -->
+  <text
+    x="484"
+    y="146"
+    font-family="Arial Black, Arial, Helvetica, sans-serif"
+    font-size="17"
+    font-weight="900"
+    letter-spacing="1.2"
+    fill="#FEFF01">
+    SUBJECT DATA
+  </text>
+
+  <!-- Row 1 -->
+  <text x="484" y="188" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="700" fill="#8C8C8C">NAME</text>
+  <text x="642" y="188" font-family="Arial Black, Arial, Helvetica, sans-serif" font-size="20" font-weight="900" fill="#F2F2F2">MATÍAS PIZARRO ACEVEDO</text>
+
+  <!-- Row 2 -->
+  <text x="484" y="223" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="700" fill="#8C8C8C">USER</text>
+  <text x="642" y="223" font-family="Arial Black, Arial, Helvetica, sans-serif" font-size="17" font-weight="900" fill="#F2F2F2">EPYLOGO</text>
+
+  <!-- Row 3 -->
+  <text x="484" y="258" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="700" fill="#8C8C8C">LOCATION</text>
+  <text x="642" y="258" font-family="Arial Black, Arial, Helvetica, sans-serif" font-size="17" font-weight="900" fill="#F2F2F2">CHILE</text>
+
+  <!-- Row 4 -->
+  <text x="484" y="293" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="700" fill="#8C8C8C">PRIMARY ROLE</text>
+  <text x="642" y="293" font-family="Arial Black, Arial, Helvetica, sans-serif" font-size="17" font-weight="900" fill="#F2F2F2">PROGRAMMER ANALYST</text>
+
+  <!-- Row 5 -->
+  <text x="484" y="328" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="700" fill="#8C8C8C">SECONDARY ROLE</text>
+  <text x="642" y="328" font-family="Arial Black, Arial, Helvetica, sans-serif" font-size="17" font-weight="900" fill="#F2F2F2">INFORMATICS ENGINEER</text>
+
+  <!-- Row 6 -->
+  <text x="484" y="363" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="700" fill="#8C8C8C">FOCUS</text>
+  <text x="642" y="363" font-family="Arial Black, Arial, Helvetica, sans-serif" font-size="17" font-weight="900" fill="#F2F2F2">REACT · TYPESCRIPT · UI/UX</text>
+
+  <!-- Divider -->
+  <rect x="484" y="392" width="420" height="1.5" fill="#252525"/>
+
+  <!-- Analysis -->
+  <text
+    x="484"
+    y="425"
+    font-family="Arial Black, Arial, Helvetica, sans-serif"
+    font-size="15"
+    font-weight="900"
+    letter-spacing="1.1"
+    fill="#FEFF01">
+    SYSTEM ANALYSIS
+  </text>
+
+  <text x="484" y="449" font-family="Courier New, monospace" font-size="12.5" font-weight="700" fill="#E6E6E6">
+    &gt; identity signature detected
+  </text>
+  <text x="484" y="469" font-family="Courier New, monospace" font-size="12.5" font-weight="700" fill="#E6E6E6">
+    &gt; frontend specialization confirmed
+  </text>
+  <text x="484" y="489" font-family="Courier New, monospace" font-size="12.5" font-weight="700" fill="#E6E6E6">
+    &gt; modern development workflow enabled
+  </text>
+
+</svg>
