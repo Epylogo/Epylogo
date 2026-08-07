@@ -1,20 +1,43 @@
-<p align="center">
-  <img
-    src="./assets/hero/hero.svg"
-    width="100%"
-    alt="Matías Pizarro Acevedo — Programmer Analyst and Informatics Engineer"
-  />
-</p>
-
-<br>
-
 <div align="center">
-<br>
 
-<p align="center">
-  <img
-    src="./assets/scan/scan.svg"
-    width="100%"
-    alt="Identity Scan — Matías Pizarro Acevedo"
-  />
-</p>
+<img
+  src="./assets/hero/hero.svg"
+  width="100%"
+  alt="Matías Pizarro Acevedo"
+/>
+
+<br><br>
+
+<h3>
+  <code>matias@github ~ $ whoami</code>
+</h3>
+
+<img
+  src="./assets/identity/identity.svg"
+  width="100%"
+  alt="Matías Pizarro Acevedo — System Identity"
+/>
+
+<br><br>
+
+<h3>
+  <code>matias@github ~ $ ./stack.sh</code>
+</h3>
+
+<img
+  src="./assets/stack/stack.svg"
+  width="100%"
+/>
+
+<br><br>
+
+<h3>
+  <code>matias@github ~ $ ./contributions.sh</code>
+</h3>
+
+<img
+  src="./assets/metrics/contributions.svg"
+  width="100%"
+/>
+
+</div>
