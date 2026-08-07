@@ -8,11 +8,11 @@
 
 <br>
 
-<a href="https://www.linkedin.com/in/matias-pizarro-acevedo/">
+<a href="https://TU-PORTAFOLIO-AQUI.com">
   <img
     src="./assets/briefcase/briefcase.svg"
     width="100%"
-    alt="Visit Matías Pizarro Acevedo Portfolio"
+    alt="Matías Pizarro Acevedo — Portfolio Access"
   />
 </a>
 
