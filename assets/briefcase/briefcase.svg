@@ -1,4 +1,3 @@
-
 <svg width="1000" height="330" viewBox="0 0 1000 330" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <style>
@@ -17,7 +16,9 @@
   <text x="38" y="68" class="heavy" font-size="22" fill="#FFFFFF">PORTFOLIO.ACCESS</text>
   <line x1="38" y1="80" x2="962" y2="80" stroke="#232323"/>
   <text x="52" y="116" class="mono" font-size="11.2" fill="#5C5C5C" letter-spacing="1.2">DIRECT.ACCESS / SELECTED WORK</text>
-  <circle cx="898" cy="112" r="4" fill="#FEFF01"><animate attributeName="opacity" values="0.35;1;0.35" dur="2.4s" repeatCount="indefinite"/></circle>
+  <circle cx="898" cy="112" r="4" fill="#FEFF01">
+    <animate attributeName="opacity" values="0.35;1;0.35" dur="2.4s" repeatCount="indefinite"/>
+  </circle>
   <text x="948" y="116" text-anchor="end" class="mono" font-size="10.8" fill="#5C5C5C">ONLINE</text>
 
   <path d="M278 145H705L722 162V208H295L278 191Z" fill="#FEFF01"/>
@@ -35,10 +36,12 @@
   </g>
 
   <text x="52" y="248" class="mono" font-size="10.8" fill="#6C6C6C">PROJECTS · CASE STUDIES · UI/UX</text>
-  <g opacity="0.65" stroke="#4E4E4E"><line x1="915" y1="246" x2="962" y2="246"/></g>
   <g opacity="0.24" stroke="#777" fill="none">
-    <circle cx="880" cy="184" r="34"/><circle cx="880" cy="184" r="22"/><circle cx="880" cy="184" r="10"/>
-    <line x1="836" y1="184" x2="924" y2="184"/><line x1="880" y1="140" x2="880" y2="228"/>
+    <circle cx="880" cy="184" r="34"/>
+    <circle cx="880" cy="184" r="22"/>
+    <circle cx="880" cy="184" r="10"/>
+    <line x1="836" y1="184" x2="924" y2="184"/>
+    <line x1="880" y1="140" x2="880" y2="228"/>
   </g>
   <circle cx="880" cy="184" r="3" fill="#FEFF01" opacity="0.8"/>
   <line x1="38" y1="284" x2="962" y2="284" stroke="#212121"/>
@@ -46,4 +49,5 @@
   <rect x="300" y="299" width="8" height="13" fill="#FEFF01">
     <animate attributeName="opacity" values="1;1;0;1" dur="1.1s" repeatCount="indefinite"/>
   </rect>
+  <rect y="326" width="1000" height="4" fill="#FEFF01"/>
 </svg>
