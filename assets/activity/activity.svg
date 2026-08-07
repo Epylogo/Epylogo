@@ -16,15 +16,12 @@ xmlns="http://www.w3.org/2000/svg">
   <rect width="1000" height="330" fill="#050505"/>
   <rect width="1000" height="330" fill="url(#grid)" opacity="0.22"/>
 
-  <!-- TOP ACCENT -->
-  <rect x="0" y="0" width="1000" height="4" fill="#FEFF01"/>
-
   <!-- META -->
   <text x="38" y="32"
         class="mono"
         font-size="10.6"
         fill="#8A8A8A"
-        letter-spacing="2">ACTIVITY / 003</text>
+        letter-spacing="2">ACTIVITY / 002</text>
 
   <text x="962" y="32"
         text-anchor="end"
@@ -268,5 +265,8 @@ xmlns="http://www.w3.org/2000/svg">
              dur="1.1s"
              repeatCount="indefinite"/>
   </rect>
+
+  <!-- BOTTOM ACCENT -->
+  <rect x="0" y="326" width="1000" height="4" fill="#FEFF01"/>
 
 </svg>
