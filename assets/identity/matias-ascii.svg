@@ -1529,8 +1529,8 @@
   </g>
 </g>
 
-<rect x="0" y="154" width="1000" height="2" fill="#FEFF01" opacity="0">
-  <animate attributeName="y" values="98;488" dur="10.5s" repeatCount="indefinite" calcMode="spline" keySplines="0.22 0.61 0.36 1"/>
+<rect x="52" y="154" width="322" height="1.5" fill="#FEFF01" opacity="0">
+  <animate attributeName="y" values="110;476" dur="10.5s" repeatCount="indefinite" calcMode="spline" keySplines="0.22 0.61 0.36 1"/>
   <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.08;0.88;1" dur="10.5s" repeatCount="indefinite"/>
 </rect>
 
