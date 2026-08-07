@@ -6,8 +6,6 @@
   alt="Matías Pizarro Acevedo — Identity"
 />
 
-<br>
-
 <a href="https://TU-PORTAFOLIO-AQUI.com">
   <img
     src="./assets/briefcase/briefcase.svg"
