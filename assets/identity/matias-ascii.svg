@@ -71,8 +71,8 @@ xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="identity-title id
   <rect width="1000" height="2" fill="#F5F5F2" opacity=".78"/>
 
   <text x="38" y="31" class="mono meta">IDENTITY / 001</text>
-  <text x="962" y="31" text-anchor="end" class="mono meta">CHILE · PROFILE ONLINE</text>
-  <circle cx="941" cy="27.5" r="2.5" class="status-dot"/>
+  <text x="946" y="31" text-anchor="end" class="mono meta">CHILE · PROFILE ONLINE</text>
+  <circle cx="960" cy="27.5" r="2.5" class="status-dot"/>
   <text x="38" y="68" class="display" font-size="24" fill="#F5F5F2">VISUAL.MAP</text>
   <text x="408" y="68" class="display" font-size="24" fill="#F5F5F2">SYSTEM.INFO</text>
   <line x1="38" y1="80" x2="962" y2="80" class="hairline"/>
