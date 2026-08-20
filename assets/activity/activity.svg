@@ -1,272 +1,64 @@
 <svg width="1000" height="330" viewBox="0 0 1000 330" fill="none"
-xmlns="http://www.w3.org/2000/svg">
-
+xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="activity-title activity-desc">
+  <title id="activity-title">Development log</title>
+  <desc id="activity-desc">Personal development activity and current project status for 2026.</desc>
   <defs>
     <style>
-      .mono { font-family: "Courier New", monospace; }
-      .heavy { font-family: Arial Black, Arial, Helvetica, sans-serif; }
+      .display{font-family:"Arial Narrow","Helvetica Neue",Arial,sans-serif;font-weight:800;letter-spacing:-.045em}
+      .ui{font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+      .mono{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace}
+      .meta{fill:#B5B5B1;font-size:10.8px;letter-spacing:1.75px}
+      .label{fill:#8A8A8A;font-size:11.2px}
+      .value{fill:#F5F5F2;font-size:11.6px;font-weight:650}
+      .hairline{stroke:#F5F5F2;stroke-opacity:.16}
+      .card{fill:#0A0A0A;stroke:#F5F5F2;stroke-opacity:.18}
+      .cursor{fill:#F5F5F2;animation:blink 1.15s steps(1,end) infinite}
+      .activeCell{fill:#F5F5F2;animation:cellPulse 3.4s ease-in-out infinite}
+      .gridScan{animation:gridScan 8.5s cubic-bezier(.22,1,.36,1) infinite}
+      .signal-bar{fill:#F5F5F2;animation:signal 3.8s ease-in-out infinite}
+      @keyframes blink{0%,48%{opacity:1}49%,100%{opacity:0}}
+      @keyframes cellPulse{0%,100%{opacity:.45}50%{opacity:1}}
+      @keyframes gridScan{0%{transform:translateX(-54px);opacity:0}14%{opacity:.22}82%{opacity:.12}100%{transform:translateX(560px);opacity:0}}
+      @keyframes signal{0%,100%{opacity:.22;transform:scaleX(.28)}50%{opacity:.85;transform:scaleX(1)}}
+      @media (prefers-reduced-motion:reduce){.cursor,.activeCell,.gridScan,.signal-bar{animation:none!important}}
     </style>
-
-    <pattern id="grid" width="18" height="18" patternUnits="userSpaceOnUse">
-      <path d="M18 0H0V18" stroke="#141414" stroke-width="1"/>
-    </pattern>
+    <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M20 0H0V20" stroke="#141414" stroke-width="1"/></pattern>
+    <pattern id="activityCells" x="430.5" y="150.5" width="18" height="18" patternUnits="userSpaceOnUse"><rect x="0" y="0" width="11" height="11" rx="1.5" fill="#111111" stroke="#F5F5F2" stroke-opacity=".10" stroke-width=".8"/></pattern>
+    <linearGradient id="bgFade" x1="0" y1="0" x2="1000" y2="330" gradientUnits="userSpaceOnUse"><stop stop-color="#050505"/><stop offset=".5" stop-color="#080808"/><stop offset="1" stop-color="#050505"/></linearGradient>
+    <linearGradient id="scannerFade" x1="0" y1="0" x2="54" y2="0" gradientUnits="userSpaceOnUse"><stop stop-color="#F5F5F2" stop-opacity="0"/><stop offset=".5" stop-color="#F5F5F2" stop-opacity=".16"/><stop offset="1" stop-color="#F5F5F2" stop-opacity="0"/></linearGradient>
+    <filter id="noise" x="-10%" y="-10%" width="120%" height="120%"><feTurbulence type="fractalNoise" baseFrequency=".82" numOctaves="2" seed="17"/><feColorMatrix type="saturate" values="0"/></filter>
+    <clipPath id="activityGridClip"><rect x="430.5" y="150.5" width="504" height="72" rx="2"/></clipPath>
   </defs>
 
-  <!-- BACKGROUND -->
-  <rect width="1000" height="330" fill="#050505"/>
-  <rect width="1000" height="330" fill="url(#grid)" opacity="0.22"/>
+  <rect width="1000" height="330" fill="url(#bgFade)"/><rect width="1000" height="330" fill="url(#grid)" opacity=".34"/><rect width="1000" height="330" filter="url(#noise)" opacity=".018"/><rect width="1000" height="2" fill="#F5F5F2" opacity=".78"/>
+  <text x="38" y="31" class="mono meta">ACTIVITY / 002</text><text x="962" y="31" text-anchor="end" class="mono meta">PERSONAL LAB · PUBLIC LOG</text><text x="38" y="68" class="display" font-size="24" fill="#F5F5F2">DEVELOPMENT.LOG</text><line x1="38" y1="80" x2="962" y2="80" class="hairline"/>
 
-  <!-- META -->
-  <text x="38" y="32"
-        class="mono"
-        font-size="10.6"
-        fill="#8A8A8A"
-        letter-spacing="2">ACTIVITY / 002</text>
+  <rect x="38" y="98" width="350" height="164" rx="10" class="card"/><path d="M38 116V108C38 102.477 42.477 98 48 98H58" stroke="#F5F5F2" stroke-opacity=".62" stroke-width="1.2"/>
+  <text x="60" y="124" class="mono" font-size="10.8" fill="#8A8A8A" letter-spacing="1.2">CURRENT.STATUS</text><text x="60" y="154" class="display" font-size="19" fill="#F5F5F2">ACTIVE</text>
 
-  <text x="962" y="32"
-        text-anchor="end"
-        class="mono"
-        font-size="10.6"
-        fill="#8A8A8A"
-        letter-spacing="2">PERSONAL LAB · PUBLIC LOG</text>
-
-  <!-- TITLE -->
-  <text x="38" y="68"
-        class="heavy"
-        font-size="22"
-        fill="#FFFFFF">DEVELOPMENT.LOG</text>
-
-  <line x1="38" y1="80" x2="962" y2="80" stroke="#232323"/>
-
-  <!-- LEFT CARD -->
-  <rect x="38" y="98" width="350" height="164" rx="10"
-        fill="#070707" stroke="#2B2B2B"/>
-
-  <text x="60" y="124"
-        class="mono"
-        font-size="11.5"
-        fill="#5C5C5C"
-        letter-spacing="1.2">CURRENT.STATUS</text>
-
-  <text x="60" y="154"
-        class="heavy"
-        font-size="18"
-        fill="#FFFFFF">ACTIVE</text>
-
-  <line x1="60" y1="166" x2="366" y2="166" stroke="#212121"/>
-
-  <text x="60" y="192"
-        class="mono"
-        font-size="12"
-        fill="#6C6C6C">MODE</text>
-
-  <text x="174" y="192"
-        class="mono"
-        font-size="12"
-        fill="#FFFFFF">PERSONAL PROJECTS</text>
-
-  <text x="60" y="218"
-        class="mono"
-        font-size="12"
-        fill="#6C6C6C">PUBLIC.LOG</text>
-
-  <text x="174" y="218"
-        class="mono"
-        font-size="12"
-        fill="#FFFFFF">QUIET</text>
-
-  <text x="60" y="244"
-        class="mono"
-        font-size="12"
-        fill="#6C6C6C">FOCUS</text>
-
-  <text x="174" y="244"
-        class="mono"
-        font-size="12"
-        fill="#FFFFFF">BUILD · LEARN · REFINE</text>
-
-  <!-- RIGHT CARD -->
-  <rect x="408" y="98" width="554" height="164" rx="10"
-        fill="#070707" stroke="#2B2B2B"/>
-
-  <text x="430" y="124"
-        class="mono"
-        font-size="11.5"
-        fill="#5C5C5C"
-        letter-spacing="1.2">ACTIVITY.MAP / 2026</text>
-
-  <text x="940" y="124"
-        text-anchor="end"
-        class="mono"
-        font-size="10.5"
-        fill="#5C5C5C"
-        letter-spacing="1">LOW PUBLIC SIGNAL</text>
-
-  <line x1="430" y1="136" x2="940" y2="136" stroke="#212121"/>
-
-  <!-- EMPTY ACTIVITY GRID -->
-  <g transform="translate(430 154)">
-    <!-- 28 columns x 4 rows, intentionally empty -->
-    <g fill="#111111" stroke="#1D1D1D" stroke-width="0.8">
-      <!-- row 1 -->
-      <rect x="0" y="0" width="11" height="11" rx="2"/>
-      <rect x="18" y="0" width="11" height="11" rx="2"/>
-      <rect x="36" y="0" width="11" height="11" rx="2"/>
-      <rect x="54" y="0" width="11" height="11" rx="2"/>
-      <rect x="72" y="0" width="11" height="11" rx="2"/>
-      <rect x="90" y="0" width="11" height="11" rx="2"/>
-      <rect x="108" y="0" width="11" height="11" rx="2"/>
-      <rect x="126" y="0" width="11" height="11" rx="2"/>
-      <rect x="144" y="0" width="11" height="11" rx="2"/>
-      <rect x="162" y="0" width="11" height="11" rx="2"/>
-      <rect x="180" y="0" width="11" height="11" rx="2"/>
-      <rect x="198" y="0" width="11" height="11" rx="2"/>
-      <rect x="216" y="0" width="11" height="11" rx="2"/>
-      <rect x="234" y="0" width="11" height="11" rx="2"/>
-      <rect x="252" y="0" width="11" height="11" rx="2"/>
-      <rect x="270" y="0" width="11" height="11" rx="2"/>
-      <rect x="288" y="0" width="11" height="11" rx="2"/>
-      <rect x="306" y="0" width="11" height="11" rx="2"/>
-      <rect x="324" y="0" width="11" height="11" rx="2"/>
-      <rect x="342" y="0" width="11" height="11" rx="2"/>
-      <rect x="360" y="0" width="11" height="11" rx="2"/>
-      <rect x="378" y="0" width="11" height="11" rx="2"/>
-      <rect x="396" y="0" width="11" height="11" rx="2"/>
-      <rect x="414" y="0" width="11" height="11" rx="2"/>
-      <rect x="432" y="0" width="11" height="11" rx="2"/>
-      <rect x="450" y="0" width="11" height="11" rx="2"/>
-      <rect x="468" y="0" width="11" height="11" rx="2"/>
-      <rect x="486" y="0" width="11" height="11" rx="2"/>
-
-      <!-- row 2 -->
-      <rect x="0" y="18" width="11" height="11" rx="2"/>
-      <rect x="18" y="18" width="11" height="11" rx="2"/>
-      <rect x="36" y="18" width="11" height="11" rx="2"/>
-      <rect x="54" y="18" width="11" height="11" rx="2"/>
-      <rect x="72" y="18" width="11" height="11" rx="2"/>
-      <rect x="90" y="18" width="11" height="11" rx="2"/>
-      <rect x="108" y="18" width="11" height="11" rx="2"/>
-      <rect x="126" y="18" width="11" height="11" rx="2"/>
-      <rect x="144" y="18" width="11" height="11" rx="2"/>
-      <rect x="162" y="18" width="11" height="11" rx="2"/>
-      <rect x="180" y="18" width="11" height="11" rx="2"/>
-      <rect x="198" y="18" width="11" height="11" rx="2"/>
-      <rect x="216" y="18" width="11" height="11" rx="2"/>
-      <rect x="234" y="18" width="11" height="11" rx="2"/>
-      <rect x="252" y="18" width="11" height="11" rx="2"/>
-      <rect x="270" y="18" width="11" height="11" rx="2"/>
-      <rect x="288" y="18" width="11" height="11" rx="2"/>
-      <rect x="306" y="18" width="11" height="11" rx="2"/>
-      <rect x="324" y="18" width="11" height="11" rx="2"/>
-      <rect x="342" y="18" width="11" height="11" rx="2"/>
-      <rect x="360" y="18" width="11" height="11" rx="2"/>
-      <rect x="378" y="18" width="11" height="11" rx="2"/>
-      <rect x="396" y="18" width="11" height="11" rx="2"/>
-      <rect x="414" y="18" width="11" height="11" rx="2"/>
-      <rect x="432" y="18" width="11" height="11" rx="2"/>
-      <rect x="450" y="18" width="11" height="11" rx="2"/>
-      <rect x="468" y="18" width="11" height="11" rx="2"/>
-      <rect x="486" y="18" width="11" height="11" rx="2"/>
-
-      <!-- row 3 -->
-      <rect x="0" y="36" width="11" height="11" rx="2"/>
-      <rect x="18" y="36" width="11" height="11" rx="2"/>
-      <rect x="36" y="36" width="11" height="11" rx="2"/>
-      <rect x="54" y="36" width="11" height="11" rx="2"/>
-      <rect x="72" y="36" width="11" height="11" rx="2"/>
-      <rect x="90" y="36" width="11" height="11" rx="2"/>
-      <rect x="108" y="36" width="11" height="11" rx="2"/>
-      <rect x="126" y="36" width="11" height="11" rx="2"/>
-      <rect x="144" y="36" width="11" height="11" rx="2"/>
-      <rect x="162" y="36" width="11" height="11" rx="2"/>
-      <rect x="180" y="36" width="11" height="11" rx="2"/>
-      <rect x="198" y="36" width="11" height="11" rx="2"/>
-      <rect x="216" y="36" width="11" height="11" rx="2"/>
-      <rect x="234" y="36" width="11" height="11" rx="2"/>
-      <rect x="252" y="36" width="11" height="11" rx="2"/>
-      <rect x="270" y="36" width="11" height="11" rx="2"/>
-      <rect x="288" y="36" width="11" height="11" rx="2"/>
-      <rect x="306" y="36" width="11" height="11" rx="2"/>
-      <rect x="324" y="36" width="11" height="11" rx="2"/>
-      <rect x="342" y="36" width="11" height="11" rx="2"/>
-      <rect x="360" y="36" width="11" height="11" rx="2"/>
-      <rect x="378" y="36" width="11" height="11" rx="2"/>
-      <rect x="396" y="36" width="11" height="11" rx="2"/>
-      <rect x="414" y="36" width="11" height="11" rx="2"/>
-      <rect x="432" y="36" width="11" height="11" rx="2"/>
-      <rect x="450" y="36" width="11" height="11" rx="2"/>
-      <rect x="468" y="36" width="11" height="11" rx="2"/>
-      <rect x="486" y="36" width="11" height="11" rx="2"/>
-
-      <!-- row 4 -->
-      <rect x="0" y="54" width="11" height="11" rx="2"/>
-      <rect x="18" y="54" width="11" height="11" rx="2"/>
-      <rect x="36" y="54" width="11" height="11" rx="2"/>
-      <rect x="54" y="54" width="11" height="11" rx="2"/>
-      <rect x="72" y="54" width="11" height="11" rx="2"/>
-      <rect x="90" y="54" width="11" height="11" rx="2"/>
-      <rect x="108" y="54" width="11" height="11" rx="2"/>
-      <rect x="126" y="54" width="11" height="11" rx="2"/>
-      <rect x="144" y="54" width="11" height="11" rx="2"/>
-      <rect x="162" y="54" width="11" height="11" rx="2"/>
-      <rect x="180" y="54" width="11" height="11" rx="2"/>
-      <rect x="198" y="54" width="11" height="11" rx="2"/>
-      <rect x="216" y="54" width="11" height="11" rx="2"/>
-      <rect x="234" y="54" width="11" height="11" rx="2"/>
-      <rect x="252" y="54" width="11" height="11" rx="2"/>
-      <rect x="270" y="54" width="11" height="11" rx="2"/>
-      <rect x="288" y="54" width="11" height="11" rx="2"/>
-      <rect x="306" y="54" width="11" height="11" rx="2"/>
-      <rect x="324" y="54" width="11" height="11" rx="2"/>
-      <rect x="342" y="54" width="11" height="11" rx="2"/>
-      <rect x="360" y="54" width="11" height="11" rx="2"/>
-      <rect x="378" y="54" width="11" height="11" rx="2"/>
-      <rect x="396" y="54" width="11" height="11" rx="2"/>
-      <rect x="414" y="54" width="11" height="11" rx="2"/>
-      <rect x="432" y="54" width="11" height="11" rx="2"/>
-      <rect x="450" y="54" width="11" height="11" rx="2"/>
-      <rect x="468" y="54" width="11" height="11" rx="2"/>
-      <rect x="486" y="54" width="11" height="11" rx="2"/>
-    </g>
-
-    <!-- single "activity" pixel -->
-    <rect x="486" y="54" width="11" height="11" rx="2"
-          fill="#FEFF01">
-      <animate attributeName="opacity"
-               values="0.22;1;0.22"
-               dur="2.8s"
-               repeatCount="indefinite"/>
-    </rect>
+  <!-- Same footer signal-line behavior as IDENTITY -->
+  <g transform="translate(60 164)">
+    <rect width="220" height="2" fill="#F5F5F2" opacity=".16"/>
+    <rect width="220" height="2" class="signal-bar" style="transform-origin:left center"/>
   </g>
 
-  <text x="430" y="242"
-        class="mono"
-        font-size="10.8"
-        fill="#6C6C6C">PUBLIC LOG: QUIET.</text>
+  <g class="ui"><text x="60" y="192" class="label">MODE</text><text x="174" y="192" class="value">PERSONAL PROJECTS</text><text x="60" y="218" class="label">PUBLIC.LOG</text><text x="174" y="218" class="value">QUIET</text><text x="60" y="244" class="label">FOCUS</text><text x="174" y="244" class="value">BUILD · LEARN · REFINE</text></g>
 
-  <text x="940" y="242"
-        text-anchor="end"
-        class="mono"
-        font-size="10.8"
-        fill="#FFFFFF">I AM STILL WORKING.</text>
+  <rect x="408" y="98" width="554" height="164" rx="10" class="card"/><text x="430" y="124" class="mono" font-size="10.8" fill="#8A8A8A" letter-spacing="1.2">ACTIVITY.MAP / 2026</text><text x="940" y="124" text-anchor="end" class="mono" font-size="10.2" fill="#8A8A8A" letter-spacing=".8">LOW PUBLIC SIGNAL</text><line x1="430" y1="136" x2="940" y2="136" class="hairline"/>
+  <rect x="430.5" y="150.5" width="504" height="72" fill="url(#activityCells)"/>
+  <g clip-path="url(#activityGridClip)"><rect x="376" y="148" width="54" height="76" fill="url(#scannerFade)" class="gridScan"/></g>
 
-  <!-- FOOTER -->
-  <line x1="38" y1="284" x2="962" y2="284" stroke="#212121"/>
+  <rect x="916.5" y="204.5" width="11" height="11" rx="1.5" class="activeCell" stroke="#F5F5F2" stroke-opacity=".34" stroke-width=".8"/>
+  <circle cx="922" cy="210" r="6" fill="none" stroke="#F5F5F2" stroke-opacity=".18">
+    <animate attributeName="r" values="6;16;24" dur="2.8s" repeatCount="indefinite"/>
+    <animate attributeName="stroke-opacity" values=".22;.12;0" dur="2.8s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="922" cy="210" r="6" fill="none" stroke="#F5F5F2" stroke-opacity=".10">
+    <animate attributeName="r" values="6;12;18" begin="1.1s" dur="2.8s" repeatCount="indefinite"/>
+    <animate attributeName="stroke-opacity" values=".16;.08;0" begin="1.1s" dur="2.8s" repeatCount="indefinite"/>
+  </circle>
 
-  <text x="38" y="310"
-        class="mono"
-        font-size="12.4"
-        fill="#8A8A8A">epylogo@github ~ % ./activity.sh</text>
+  <text x="430" y="242" class="mono" font-size="10.8" fill="#8A8A8A">PUBLIC LOG: QUIET.</text><text x="940" y="242" text-anchor="end" class="mono" font-size="10.8" fill="#F5F5F2">I AM STILL WORKING.</text>
 
-  <rect x="292" y="299" width="8" height="13"
-        fill="#FEFF01">
-    <animate attributeName="opacity"
-             values="1;1;0;1"
-             dur="1.1s"
-             repeatCount="indefinite"/>
-  </rect>
-
-  <!-- BOTTOM ACCENT -->
-  <rect x="0" y="326" width="1000" height="4" fill="#FEFF01"/>
-
+  <line x1="38" y1="284" x2="962" y2="284" class="hairline"/><text x="38" y="310" class="mono" font-size="12.2" fill="#B5B5B1">epylogo@github ~ % ./activity.sh</text><rect x="286" y="299" width="8" height="13" class="cursor"/><rect x="0" y="328" width="1000" height="2" fill="#F5F5F2" opacity=".56"/>
 </svg>
