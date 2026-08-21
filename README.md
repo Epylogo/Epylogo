@@ -15,13 +15,13 @@
 </a>
 <br>
 <br>
-
-<img
-  src="[./assets/activity/activity.svg](https://mpamodule.vercel.app/)"
-  width="100%"
-  alt="Matías Pizarro Acevedo — Development Activity"
+<a href="https://mpamodule.vercel.app/">
+  <img
+    src="./assets/activity/activity.svg"
+    width="100%"
+    alt="Matías Pizarro Acevedo — Development Activity"
+  />
+</a>
 />
 
 </div>
-abc def ghi jkl mno pqr stu
-abc def ghi jkl mno pqr stu
