@@ -17,12 +17,10 @@
 <br>
 <br>
 
-<a href="https://mpamodule.vercel.app/" target="_blank" rel="noopener noreferrer">
-  <img
-    src="./assets/activity/activity.svg"
-    width="100%"
-    alt="Matías Pizarro Acevedo — Development Activity"
+<img
+  src="./assets/activity/activity.svg"
+  width="100%"
+  alt="Matías Pizarro Acevedo — Development Activity"
 />
-</a>
 
 </div>
