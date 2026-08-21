@@ -6,22 +6,23 @@
   alt="Matías Pizarro Acevedo — Identity"
 />
 
-<a href="https://mpamodule.vercel.app/">
+<a href="https://mpamodule.vercel.app/" target="_blank" rel="noopener noreferrer">
   <img
     src="./assets/briefcase/briefcase.svg"
     width="100%"
     alt="Matías Pizarro Acevedo — Portfolio Access"
-  />
+/>
 </a>
+
 <br>
 <br>
-<a href="https://mpamodule.vercel.app/">
+
+<a href="https://mpamodule.vercel.app/" target="_blank" rel="noopener noreferrer">
   <img
     src="./assets/activity/activity.svg"
     width="100%"
     alt="Matías Pizarro Acevedo — Development Activity"
-  />
-</a>
 />
+</a>
 
 </div>
